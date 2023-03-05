@@ -1,0 +1,4 @@
+*.terraform
+*.tfstate
+*.pub
+terraform_cod/dev/instances/assignment1-dev
