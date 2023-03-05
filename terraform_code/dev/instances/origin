@@ -13,7 +13,6 @@ provider "aws" {
 }
 
 # Data source for AMI id
-<<<<<<< HEAD
 data "aws_ami" "latest_amazon_linux" {
   owners      = ["amazon"]
   most_recent = true
@@ -22,16 +21,6 @@ data "aws_ami" "latest_amazon_linux" {
     values = ["amzn2-ami-hvm-*-x86_64-gp2"]
   }
 }
-=======
-#data "aws_ami" "latest_amazon_linux" {
-#  owners      = ["amazon"]
- # most_recent = true
-  #filter {
-  #  name   = "name"
-   # values = ["amzn2-ami-hvm-*-x86_64-gp2"]
-  #}
-#}
->>>>>>> 713f5ae098fe56de72e076951634f00ffc2b9c53
 
 
 # Data source for availability zones in us-east-1
@@ -40,15 +29,9 @@ data "aws_availability_zones" "available" {
 }
 
 # Data block to retrieve the default VPC id
-<<<<<<< HEAD
 data "aws_vpc" "default" {
   default = true
 }
-=======
-#data "aws_vpc" "default" {
- # default = true
-#}
->>>>>>> 713f5ae098fe56de72e076951634f00ffc2b9c53
 
 # Define tags locally
 locals {
@@ -62,7 +45,6 @@ module "globalvars" {
   source = "../../modules/globalvars"
 }
 
-<<<<<<< HEAD
 # Reference subnet provisioned by 01-Networking 
 resource "aws_instance" "my_amazon" {
   ami                         = data.aws_ami.latest_amazon_linux.id
@@ -127,8 +109,6 @@ resource "aws_security_group" "my_sg" {
 }
 
 
-=======
->>>>>>> 713f5ae098fe56de72e076951634f00ffc2b9c53
 # ECR Repository
 # Create AWS app repo
 resource "aws_ecr_repository" "web_app" {
@@ -142,7 +122,6 @@ resource "aws_ecr_repository" "sql_app" {
     image_tag_mutability = "MUTABLE"
 }
 
-<<<<<<< HEAD
 
 # Elastic IP
 resource "aws_eip" "static_eip" {
@@ -153,5 +132,3 @@ resource "aws_eip" "static_eip" {
     }
   )
 }
-=======
->>>>>>> 713f5ae098fe56de72e076951634f00ffc2b9c53
