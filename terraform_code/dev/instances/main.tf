@@ -29,9 +29,9 @@ data "aws_availability_zones" "available" {
 }
 
 # Data block to retrieve the default VPC id
-#data "aws_vpc" "default" {
- # default = true
-#}
+data "aws_vpc" "default" {
+ default = true
+}
 
 # Define tags locally
 locals {

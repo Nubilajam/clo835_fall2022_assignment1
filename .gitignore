@@ -2,3 +2,4 @@
 *.tfstate
 *.pub
 terraform_cod/dev/instances/assignment1-dev
+terraform_code/dev/instances/.terraform.lock.hcl
