@@ -29,7 +29,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: webapp_nubila_ecr
-        IMAGE_TAG: v0.1
+        IMAGE_TAG: v0.121
       run: |
         cd web_app/
         ls -ltra
@@ -42,7 +42,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: sql_nubila_ecr
-        IMAGE_TAG: v0.1
+        IMAGE_TAG: v0.12
       run: |
         cd sql_app/
         ls -ltra
